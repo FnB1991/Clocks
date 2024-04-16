@@ -1,0 +1,58 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* CLOCK STYLES */
+  .clockContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .hours, .minutes, .seconds {
+    font-size: 100px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* CLOCK ANIMATION */
+  .hours, .minutes, .seconds {
+    animation: clockTick 1s linear infinite;
+  }
+  
+  @keyframes clockTick {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .clockContainer {
+      height: 50vh;
+    }
+  
+    .hours, .minutes, .seconds {
+      font-size: 80px;
+    }
+  }
